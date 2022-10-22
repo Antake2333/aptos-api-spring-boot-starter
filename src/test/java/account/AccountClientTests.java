@@ -24,4 +24,9 @@ public class AccountClientTests {
     public void testGetAccount() {
         System.out.println(accountClient.getAccount(ADDRESS));
     }
+
+    @Test
+    public void testGetAccountResources() {
+        accountClient.getAccountResource(ADDRESS).forEach(System.out::println);
+    }
 }

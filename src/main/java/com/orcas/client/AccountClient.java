@@ -7,6 +7,8 @@ import com.orcas.util.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * @author Orcas
  * @date 2022/10/22
@@ -25,5 +27,10 @@ public class AccountClient {
     public AccountData getAccount(String address) {
         Assert.isAddress(address);
         return Forest.get(getAccountUrl() + address).execute(AccountData.class);
+    }
+
+    public List<Object> getAccountResource(String address) {
+        Assert.isAddress(address);
+        return Forest.get(getAccountUrl() + address + "/resources").executeAsList();
     }
 }
