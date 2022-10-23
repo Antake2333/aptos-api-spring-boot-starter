@@ -21,6 +21,11 @@ public class AptosApi4jException extends RuntimeException {
         this.code = code;
     }
 
+    public AptosApi4jException(String message) {
+        super(message);
+        this.code = AptosApiError.SYSTEM_ERROR.getCode();
+    }
+
     public AptosApi4jException(ErrorCode errorCode) {
         super(errorCode.getMsg());
         this.code = errorCode.getCode();

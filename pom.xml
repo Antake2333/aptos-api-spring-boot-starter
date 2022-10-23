@@ -11,14 +11,20 @@
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
-        <springboot.version>2.7.5</springboot.version>
+        <springboot.version>2.7.4</springboot.version>
         <forest.version>1.5.26</forest.version>
         <fastjson.version>1.2.83</fastjson.version>
         <jackson.version>2.13.4</jackson.version>
         <lombok.version>1.18.24</lombok.version>
+        <crypto.eddsa.version>0.3.0</crypto.eddsa.version>
         <commons.lang3.version>3.12.0</commons.lang3.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>net.i2p.crypto</groupId>
+            <artifactId>eddsa</artifactId>
+            <version>${crypto.eddsa.version}</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
